@@ -20,8 +20,8 @@ export default function Home() {
       blendingValue="soft-light"
     >
       <div className="absolute z-50 inset-0 flex flex-col md:flex-row items-center justify-center min-h-screen w-full gap-4 md:gap-8 px-4 md:px-10 py-8 md:py-0">
-        {/* Left: App name and description with animated heading */}
-        <div className="flex-1 max-w-xl w-full text-center p-4 md:p-10">
+        {/* Content: App name and description with animated heading - centered on mobile */}
+        <div className="flex-1 max-w-xl w-full text-center p-4 md:p-10 flex flex-col justify-center">
           <SparklesPreview headingClassName="text-3xl sm:text-4xl md:text-5xl lg:text-7xl" />
           <div className="mb-4 md:mb-6 mt-3 md:mt-4">
             <TextGenerateEffectDemo
@@ -32,8 +32,8 @@ export default function Home() {
           </div>
           <LayoutTextFlipDemo />
         </div>
-        {/* Right: Pixelated Canvas Demo */}
-        <div className="flex-1 flex items-center justify-center w-full min-h-[200px] md:min-h-[400px]">
+        {/* Right: Pixelated Canvas Demo - Hidden on mobile, visible on desktop */}
+        <div className="hidden md:flex flex-1 items-center justify-center w-full min-h-[400px]">
           <PixelatedCanvasDemo />
         </div>
       </div>
