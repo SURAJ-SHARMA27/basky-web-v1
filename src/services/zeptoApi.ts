@@ -218,7 +218,7 @@ export function extractProductsFromResponse(response: ZeptoProductSearchResponse
   return products;
 }
 
-export async function searchLocations(searchTerm: string, apiBase = "https://basky-api-351464446445.us-central1.run.app"):
+export async function searchLocations(searchTerm: string, apiBase = "https://basky-api-rev-351464446445.asia-south1.run.app"):
   Promise<ZeptoSearchResponse> {
   try {
     const response = await fetch(`${apiBase}/api/zepto/search-locations`, {
@@ -245,7 +245,7 @@ export interface ZeptoSelectResponse {
   error?: string;
 }
 
-export async function selectLocation(prediction: ZeptoPrediction, apiBase = "https://basky-api-351464446445.us-central1.run.app"): Promise<ZeptoSelectResponse> {
+export async function selectLocation(prediction: ZeptoPrediction, apiBase = "https://basky-api-rev-351464446445.asia-south1.run.app"): Promise<ZeptoSelectResponse> {
   try {
     const response = await fetch(`${apiBase}/api/zepto/select-location`, {
       method: 'POST',
@@ -271,7 +271,7 @@ export async function selectLocation(prediction: ZeptoPrediction, apiBase = "htt
   }
 }
 
-export async function searchProducts(productName: string, apiBase = "https://basky-api-351464446445.us-central1.run.app"): Promise<ZeptoProductSearchResponse> {
+export async function searchProducts(productName: string, apiBase = "https://basky-api-rev-351464446445.asia-south1.run.app"): Promise<ZeptoProductSearchResponse> {
   try {
     const response = await fetch(`${apiBase}/api/zepto/search-products`, {
       method: 'POST',
